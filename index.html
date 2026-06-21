@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KhataCRM - Manage, Track, Collaborate</title>
+
+    <!-- SEO -->
+    <title>Khata Wahi - Digital Udhar Khata Book & Ledger App</title>
+
+    <meta name="description"
+        content="Khata Wahi is a digital ledger app for shop owners, freelancers, and small businesses. Track udhar, record payments, manage customer accounts, generate PDF statements, share via WhatsApp, and work offline." />
+
+    <meta name="keywords"
+        content="Khata Wahi, udhar khata app, digital ledger app, khata book, credit ledger, payment tracker, customer ledger, offline ledger app, small business accounting app" />
+
+    <meta name="author" content="Dream Mythic Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3b82f6" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Khata Wahi - Digital Udhar Khata Book & Ledger App" />
+    <meta property="og:description"
+        content="Track customer credit, payments, balances, generate PDF reports and share via WhatsApp. Works offline." />
+    <meta property="og:image" content="https://khatawahi.com/assets/og-image.jpg" />
+    <meta property="og:url" content="https://khatawahi.com" />
+    <meta property="og:site_name" content="Khata Wahi" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Khata Wahi - Digital Udhar Khata Book & Ledger App" />
+    <meta name="twitter:description"
+        content="Manage customer accounts, track payments, generate PDF reports and work offline." />
+    <meta name="twitter:image" content="https://khatawahi.com/assets/og-image.jpg" />
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"MobileApplication",
+      "name":"Khata Wahi",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Android",
+      "description":"Digital ledger app for tracking customer credit, payments and balances.",
+      "offers":{
+        "@type":"Offer",
+        "price":"30",
+        "priceCurrency":"INR"
+      },
+      "publisher":{
+        "@type":"Organization",
+        "name":"Dream Mythic Studio"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+
     <script>
         tailwind.config = {
             theme: {
@@ -28,7 +81,12 @@
             },
         };
     </script>
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .gradient-bg {
             background: radial-gradient(circle at 80% 20%, #eff6ff 0%, #ffffff 50%);
         }
@@ -38,6 +96,8 @@
         }
     </style>
 </head>
+
+
 
 <body class="font-sans text-slate-800 antialiased overflow-x-hidden gradient-bg">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative z-50">
