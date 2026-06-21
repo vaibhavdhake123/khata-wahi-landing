@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KhataCRM - Manage, Track, Collaborate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    colors: {
+                        brand: {
+                            blue: "#3b82f6",
+                            darkBlue: "#2563eb",
+                            navy: "#1e3a8a",
+                            bgLight: "#f8fafc",
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .gradient-bg {
+            background: radial-gradient(circle at 80% 20%, #eff6ff 0%, #ffffff 50%);
+        }
+
+        .app-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 antialiased overflow-x-hidden gradient-bg">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative z-50">
+        <div class="flex items-center space-x-2">
+            <img src="assets/logo.png" alt="KhataCRM Logo" class="w-10 h-10 object-contain rounded-xl" />
+            <span class="text-xl font-extrabold text-slate-900">Khata <span class="text-brand-blue">Wahi</span></span>
+        </div>
+
+
+        <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+            <a href="#" class="text-brand-blue border-b-2 border-brand-blue pb-1">Home</a>
+            <a href="#features" class="hover:text-slate-900 transition">Features</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://dreammythic.com/page/6a0c601dd115e365bb5adf33"
+                class="hover:text-slate-900 transition">About Us</a>
+        </div>
+
+
+        <div class="hidden md:flex items-center">
+            <a target="_blank" rel="noopener noreferrer"
+                href="https://play.google.com/store/apps/details?id=com.khatawahi.app" target="_blank"
+                class="bg-brand-blue hover:bg-brand-darkBlue text-white px-6 py-2.5 rounded-xl font-semibold shadow-md shadow-blue-200 transition flex items-center gap-2">
+                <i class="fa-brands fa-google-play"></i> Download
+            </a>
+        </div>
+
+
+        <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-6 right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex flex-col space-y-4 font-semibold z-50">
+
+            <a href="#" class="text-brand-blue">Home</a>
+            <a href="#features" class="text-slate-600">Features</a>
+            <a href="https://dreammythic.com/page/6a0c601dd115e365bb5adf33" target="_blank" rel="noopener noreferrer"
+                class="text-slate-600">About Us</a>
+            <hr class="border-slate-100" />
+
+
+            <a href="https://play.google.com/store/apps/details?id=com.khatawahi.app" target="_blank"
+                rel="noopener noreferrer" target="_blank"
+                class="w-full bg-brand-blue text-white py-2.5 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-md">
+                <i class="fa-brands fa-google-play"></i> Download
+            </a>
+        </div>
+    </nav>
+
+    <header
+        class="max-w-7xl mx-auto px-6 pt-8 pb-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
+        <div class="lg:col-span-6 space-y-6 z-10">
+            <span
+                class="inline-flex items-center gap-1.5 bg-blue-50 text-brand-blue text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                <i class="fa-solid fa-book"></i>
+                Smart Digital Khata Book
+            </span>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                Manage Udhar.<br />
+                Track Payments.<br />
+                <span class="text-brand-blue">Stay Organized.</span>
+            </h1>
+
+            <p class="text-slate-500 text-base sm:text-lg max-w-xl leading-relaxed">
+                Khata Wahi is a simple digital ledger app for shop owners, freelancers, and small businesses. Record
+                credit transactions, manage customer accounts, track balances, generate PDF reports, and share
+                statements via WhatsApp — all even without internet.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                    class="bg-brand-blue hover:bg-brand-darkBlue text-white px-8 py-4 rounded-xl font-bold flex items-center shadow-lg shadow-blue-200 transition">
+                    Download Free
+                    <i class="fa-solid fa-download ml-2 text-sm"></i>
+                </button>
+
+                <button
+                    class="flex items-center gap-2 px-6 py-4 font-bold text-slate-700 hover:text-brand-blue transition">
+                    <span
+                        class="w-9 h-9 border-2 border-slate-200 rounded-full flex items-center justify-center text-brand-blue">
+                        <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                    </span>
+                    See Features
+                </button>
+            </div>
+
+            <div class="flex flex-wrap gap-5 pt-4 text-sm font-medium text-slate-600">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-wifi-slash text-green-600"></i>
+                    Works Offline
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-green-500"></i>
+                    WhatsApp Sharing
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf text-red-500"></i>
+                    PDF Reports
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-blue-500"></i>
+                    Secure Records
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 pt-6">
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl px-4 py-3 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-brand-blue">
+                        <i class="fa-solid fa-tag text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-slate-800" id="app-price">₹30 One-Time Purchase</p>
+                        <p class="text-xs text-slate-500">Pay Once • Use Forever • No Monthly Charges</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                async function updatePrice() {
+                    try {
+                        const response = await fetch("https://ipapi.co/json/");
+                        const data = await response.json();
+                        const prices = {
+                            IN: "₹30",
+                            US: "$0.49",
+                            GB: "£0.39",
+                            CA: "CA$0.69",
+                            AU: "A$0.79",
+                            DE: "€0.49",
+                            FR: "€0.49",
+                            IT: "€0.49",
+                            ES: "€0.49",
+                            JP: "¥80",
+                        };
+                        const price = prices[data.country_code] || "$0.49";
+                        document.getElementById("app-price").textContent = `${price} One-Time Purchase`;
+                    } catch (error) {
+                        document.getElementById("app-price").textContent = "Affordable One-Time Purchase";
+                    }
+                }
+                document.addEventListener("DOMContentLoaded", updatePrice);
+            </script>
+        </div>
+
+        <div class="lg:col-span-6 relative flex justify-center lg:justify-end items-center">
+            <div class="absolute -left-10 bottom-10 text-slate-200 opacity-60 hidden sm:block -z-10">
+                <div class="grid grid-cols-6 gap-2">
+                    <span class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span>
+                    <span class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span>
+                    <span class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span><span
+                        class="w-2 h-2 bg-current rounded-full"></span>
+                </div>
+            </div>
+
+            <div
+                class="w-[260px] sm:w-[290px] overflow-hidden transform -rotate-6 z-20 relative transition-transform hover:rotate-0 duration-500">
+                <div class="w-full h-auto">
+                    <img src="assets/dashboard-screen.png" alt="Dashboard App Screen"
+                        class="w-full h-full object-contain" />
+                </div>
+            </div>
+
+            <div
+                class="w-[260px] sm:w-[290px] overflow-hidden transform rotate-6 translate-x-[-40px] sm:translate-x-[-60px] mt-12 z-10 transition-transform hover:rotate-0 duration-500">
+                <div class="w-full h-auto overflow-hidden">
+                    <img src="assets/leads-screen.png" alt="Leads App Screen" class="w-full h-full object-contain" />
+                </div>
+            </div>
+
+            <div
+                class="absolute right-0 top-1/2 transform translate-x-6 sm:translate-x-12 -translate-y-1/2 bg-brand-blue text-white w-20 h-20 sm:w-24 sm:h-24 rounded-full flex flex-col items-center justify-center text-center p-2 shadow-xl border-4 border-white z-30 rotate-12">
+                <i class="fa-solid fa-chart-line text-sm sm:text-base"></i>
+                <span class="text-[10px] sm:text-xs font-bold mt-1 uppercase tracking-tight leading-tight">Grow
+                    Smarter</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="features"
+        class="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="lg:col-span-6 space-y-6">
+            <span
+                class="inline-block bg-blue-50 text-brand-blue text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Features</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                Everything You Need To Manage Customer Accounts
+            </h2>
+            <p class="text-slate-500 max-w-lg leading-relaxed">
+                Replace paper registers with a smart digital ledger. Record credit, payments, customer balances and
+                generate reports in seconds.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div
+                        class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-3 text-lg">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">Digital Ledger Book</h3>
+                    <p class="text-xs text-slate-400">
+                        Manage customer accounts and transaction history digitally.
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div
+                        class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-3 text-lg">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">Works Offline</h3>
+                    <p class="text-xs text-slate-400">Access and manage your ledger anytime without internet.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-3 text-lg">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">PDF Reports</h3>
+                    <p class="text-xs text-slate-400">
+                        Generate customer statements and share instantly via WhatsApp.
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div
+                        class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 text-lg">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-1">Business Insights</h3>
+                    <p class="text-xs text-slate-400">Monitor cash flow, receivables, and business performance.</p>
+                </div>
+            </div>
+
+            <a href="#"
+                class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkBlue transition pt-2">Explore
+                All Features <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="lg:col-span-6 flex justify-center items-center relative">
+            <div
+                class="w-[280px] sm:w-[310px] bg-white rounded-[44px] shadow-2xl border-[8px] border-slate-900 overflow-hidden relative">
+                <div class="p-4 pt-8 space-y-4 bg-white min-h-[500px] text-xs">
+                    <div class="flex items-center gap-2 text-slate-700 font-bold mb-2">
+                        <i class="fa-solid fa-arrow-left text-sm"></i> <span>Deal Pipeline</span>
+                    </div>
+
+                    <div class="space-y-1.5 px-2">
+                        <div
+                            class="bg-indigo-500 text-white p-2 rounded-lg text-[10px] flex justify-between items-center w-full mx-auto shadow-sm">
+                            <span class="font-medium">New Lead</span><span class="font-bold">128</span>
+                        </div>
+                        <div
+                            class="bg-purple-500 text-white p-2 rounded-lg text-[10px] flex justify-between items-center w-[90%] mx-auto shadow-sm">
+                            <span class="font-medium">Contacted</span><span class="font-bold">94</span>
+                        </div>
+                        <div
+                            class="bg-pink-500 text-white p-2 rounded-lg text-[10px] flex justify-between items-center w-[80%] mx-auto shadow-sm">
+                            <span class="font-medium">Qualified</span><span class="font-bold">63</span>
+                        </div>
+                        <div
+                            class="bg-amber-500 text-white p-2 rounded-lg text-[10px] flex justify-between items-center w-[70%] mx-auto shadow-sm">
+                            <span class="font-medium">Proposal</span><span class="font-bold">28</span>
+                        </div>
+                        <div
+                            class="bg-emerald-500 text-white p-2 rounded-lg text-[10px] flex justify-between items-center w-[60%] mx-auto shadow-sm">
+                            <span class="font-medium">Won</span><span class="font-bold">16</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 space-y-2">
+                        <p class="font-bold text-slate-700 text-[11px]">Top Performing Team</p>
+                        <div class="flex justify-between items-center bg-slate-50 p-2 rounded-xl">
+                            <div class="flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-full bg-slate-300"></span>
+                                <div>
+                                    <p class="font-bold text-slate-800">Aman Kumar</p>
+                                    <p class="text-[9px] text-slate-400">23 Deals</p>
+                                </div>
+                            </div>
+                            <span class="font-extrabold text-slate-800">₹6,45,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="absolute -right-4 bottom-20 bg-white p-3 rounded-2xl shadow-xl border border-slate-50 w-44 space-y-1 z-20 hidden sm:block transform translate-x-6">
+                <p class="text-[10px] text-slate-400 font-medium">Revenue This Month</p>
+                <div class="flex items-baseline justify-between">
+                    <span class="text-sm font-extrabold text-slate-900">₹18,75,000</span>
+                    <span class="text-[8px] font-bold text-emerald-500">+15.7%</span>
+                </div>
+                <div class="h-6 bg-emerald-50/50 rounded-md overflow-hidden flex items-end">
+                    <svg class="w-full h-4 text-emerald-500" viewBox="0 0 100 30" preserveAspectRatio="none">
+                        <path d="M0,25 Q20,10 40,20 T80,5 T100,15 L100,30 L0,30 Z" fill="rgba(16,185,129,0.1)" />
+                        <path d="M0,25 Q20,10 40,20 T80,5 T100,15" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-100">
+        <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-400 mb-10">
+            Why Choose Khata Wahi
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+            <div class="space-y-3">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-green-50 flex items-center justify-center">
+                    <i class="fa-solid fa-wifi text-green-600 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">Works Offline</h3>
+                <p class="text-xs text-slate-500">No internet required. Access records anytime.</p>
+            </div>
+
+            <div class="space-y-3">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-50 flex items-center justify-center">
+                    <i class="fa-solid fa-file-pdf text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">PDF Statements</h3>
+                <p class="text-xs text-slate-500">Generate and share customer reports instantly.</p>
+            </div>
+
+            <div class="space-y-3">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-purple-50 flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">WhatsApp Sharing</h3>
+                <p class="text-xs text-slate-500">Send statements and reminders in one tap.</p>
+            </div>
+
+            <div class="space-y-3">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-50 flex items-center justify-center">
+                    <i class="fa-solid fa-lock text-amber-600 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">Private & Secure</h3>
+                <p class="text-xs text-slate-500">Your data stays on your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 mb-20">
+        <div
+            class="app-bg rounded-[32px] text-white p-8 sm:p-12 md:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center overflow-hidden relative shadow-xl shadow-blue-900/10">
+            <div
+                class="lg:col-span-5 flex justify-center lg:justify-start transform translate-y-8 sm:translate-y-16 lg:translate-y-20">
+                <div class="w-[230px] sm:w-[260px] h-auto overflow-hidden">
+                    <img src="assets/cta-mobile-screen.png" alt="KhataWahi App Overview"
+                        class="w-full h-full object-contain" />
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-6 lg:pl-6 text-center lg:text-left">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    Take Control of Your Daily Accounts
+                </h2>
+                <p class="text-blue-100 max-w-md text-sm sm:text-base font-light leading-relaxed mx-auto lg:mx-0">
+                    Track udhar, record payments, and manage customer accounts effortlessly. Stay organized with a
+                    digital ledger designed for shop owners, freelancers, and small businesses.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="https://play.google.com/store/apps/details?id=com.khatawahi.app" target="_blank"
+                        class="bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-xl flex items-center gap-3 border border-slate-800 transition w-44 text-left shadow-md">
+                        <i class="fa-brands fa-google-play text-xl"></i>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Get it on</p>
+                            <p class="text-xs font-bold -mt-0.5">Google Play</p>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-xl flex items-center gap-3 border border-slate-800 transition w-44 text-left shadow-md">
+                        <i class="fa-brands fa-apple text-2xl"></i>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">
+                                Download on the
+                            </p>
+                            <p class="text-xs font-bold -mt-0.5">App Store</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="pt-6 border-t border-blue-400/30 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <div class="bg-white p-2 rounded-xl inline-block shadow-md">
+                        <img src="assets/qr-code.png" alt="Scan to Download KhataWahi"
+                            class="w-20 h-20 object-contain rounded-lg" />
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <p class="text-xs font-bold text-white">Scan to Download</p>
+                        <p class="text-[11px] text-blue-100">KhataWahi App instantly available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <img src="assets/logo.png" alt="Khata Wahi Logo" class="w-8 h-8 object-contain rounded-lg" />
+                <span class="font-extrabold text-white"> Khata <span class="text-brand-blue">Wahi</span> </span>
+            </div>
+
+            <p class="text-center sm:text-right">
+                © 2026 Khata Wahi. All rights reserved. Simple digital ledger for small businesses.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close dropdown menu if window scaled out of phone dimensions context
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>
