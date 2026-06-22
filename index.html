@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 
     <!-- SEO -->
     <title>Khata Wahi - Digital Udhar Khata Book & Ledger App</title>
@@ -25,7 +27,7 @@
     <meta property="og:title" content="Khata Wahi - Digital Udhar Khata Book & Ledger App" />
     <meta property="og:description"
         content="Track customer credit, payments, balances, generate PDF reports and share via WhatsApp. Works offline." />
-    <meta property="og:image" content="https://khatawahi.com/assets/og-image.jpg" />
+    <meta property="og:image" content="https://khatawahi.com/assets/favicon-32x32.png" />
     <meta property="og:url" content="https://khatawahi.com" />
     <meta property="og:site_name" content="Khata Wahi" />
 
@@ -34,28 +36,28 @@
     <meta name="twitter:title" content="Khata Wahi - Digital Udhar Khata Book & Ledger App" />
     <meta name="twitter:description"
         content="Manage customer accounts, track payments, generate PDF reports and work offline." />
-    <meta name="twitter:image" content="https://khatawahi.com/assets/og-image.jpg" />
+    <meta name="twitter:image" content="https://khatawahi.com/assets/favicon-32x32.png" />
 
     <!-- Schema -->
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"MobileApplication",
-      "name":"Khata Wahi",
-      "applicationCategory":"BusinessApplication",
-      "operatingSystem":"Android",
-      "description":"Digital ledger app for tracking customer credit, payments and balances.",
-      "offers":{
-        "@type":"Offer",
-        "price":"30",
-        "priceCurrency":"INR"
-      },
-      "publisher":{
-        "@type":"Organization",
-        "name":"Dream Mythic Studio"
-      }
-    }
-    </script>
+            {
+                "@context": "https://schema.org",
+                "@type": "MobileApplication",
+                "name": "Khata Wahi",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Android",
+                "description": "Digital ledger app for tracking customer credit, payments and balances.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "30",
+                    "priceCurrency": "INR"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Dream Mythic Studio"
+                }
+            }
+        </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -97,8 +99,6 @@
     </style>
 </head>
 
-
-
 <body class="font-sans text-slate-800 antialiased overflow-x-hidden gradient-bg">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative z-50">
         <div class="flex items-center space-x-2">
@@ -106,14 +106,12 @@
             <span class="text-xl font-extrabold text-slate-900">Khata <span class="text-brand-blue">Wahi</span></span>
         </div>
 
-
         <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
             <a href="#" class="text-brand-blue border-b-2 border-brand-blue pb-1">Home</a>
             <a href="#features" class="hover:text-slate-900 transition">Features</a>
             <a target="_blank" rel="noopener noreferrer" href="https://dreammythic.com/page/6a0c601dd115e365bb5adf33"
                 class="hover:text-slate-900 transition">About Us</a>
         </div>
-
 
         <div class="hidden md:flex items-center">
             <a target="_blank" rel="noopener noreferrer"
@@ -123,7 +121,6 @@
             </a>
         </div>
 
-
         <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none">
             <i class="fa-solid fa-bars text-2xl"></i>
         </button>
@@ -131,13 +128,11 @@
         <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu"
             class="hidden absolute top-20 left-6 right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex flex-col space-y-4 font-semibold z-50">
-
             <a href="#" class="text-brand-blue">Home</a>
             <a href="#features" class="text-slate-600">Features</a>
             <a href="https://dreammythic.com/page/6a0c601dd115e365bb5adf33" target="_blank" rel="noopener noreferrer"
                 class="text-slate-600">About Us</a>
             <hr class="border-slate-100" />
-
 
             <a href="https://play.google.com/store/apps/details?id=com.khatawahi.app" target="_blank"
                 rel="noopener noreferrer" target="_blank"
